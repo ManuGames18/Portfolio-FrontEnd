@@ -1,0 +1,30 @@
+header{
+    background-color: #7A1414;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 25%;
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.headerBtn{
+    padding: 10px 20px;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    nav{
+        padding: 5px;
+    }
+
+    
+}

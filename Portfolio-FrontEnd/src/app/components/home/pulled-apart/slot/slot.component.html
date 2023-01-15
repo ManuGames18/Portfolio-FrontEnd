@@ -1,0 +1,12 @@
+<div class="slot" (click)="slotClick()" (mouseenter)="setMouse(true)" (mouseleave)="setMouse(false)">
+    <app-x-button class="icon" color="#7A1414" (btnClick)="destroySlot()" ></app-x-button>
+    <img 
+        [class]="mouse ? 'mouseIn' : 'mouseOut'"
+        [src]="imageUrl" 
+        [alt]="name + ' image'"
+    >
+    <div [class]="mouse ? 'mouseIn' : 'mouseOut'">
+        <h1>{{name}}</h1>
+        <p>{{text}}</p>
+    </div>
+</div>

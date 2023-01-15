@@ -1,0 +1,31 @@
+<div class="pulled-apart">
+    <div class="div-1">
+        <h3>{{name}}</h3> 
+        <div class="div-2">
+            <app-plus-button class="icon" [color]="addSlot ? '#7B2121' : '#ECECEC'" (btnClick)="toggleAddSlot()"></app-plus-button>
+            <app-x-button class="icon" color="#7A1414" (btnClick)="destroyPulledApart()"></app-x-button>
+        </div>
+    </div>
+    
+    
+    <form *ngIf="addSlot" autocomplete="off">
+        <div>
+            <img [src]="imageUrl" class="image" alt="input image">
+            <input type="file" name="image" (change)="captureImage($event)">
+        </div>
+        <div class="inputsTexts">
+            <input type="text" class="name" name="name" placeholder="Name" [(ngModel)]="slotName">
+            <input type="text" class="text" name="text" placeholder="Text" [(ngModel)]="slotText">
+            <input type="url" class="url" name="url" placeholder="https://www.example.com" [(ngModel)]="slotLink"/>
+        </div>
+    </form>
+    
+    <app-slot
+        *ngFor="let slot of slots"
+        [name]="slot.name"
+        [imageUrl]="slot.imageUrl"
+        [text]="slot.text"
+        [urlLink]="slot.urlLink"
+        (destroy)="destroySlot($event)"
+    ></app-slot>
+</div>

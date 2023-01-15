@@ -1,0 +1,30 @@
+div{
+    background-color: #282828;
+}
+
+div.pulled-aparts{
+    left: 0px;
+    right: 0px;
+    align-items: center;
+    display: block;
+    justify-content: space-between;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+label{
+    font-size: 30px;
+}
+label input{
+    height: 45px;
+    width: 250px;
+    font-size: 30px;
+}
+
+.pulled-apart{
+    margin: 15px;
+}
+
+.icon{
+    margin: 0% 0% 15% 90%
+}

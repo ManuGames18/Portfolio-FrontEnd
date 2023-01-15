@@ -1,0 +1,63 @@
+form{
+    align-items: center;
+    display: flex;
+    padding: 75px 35px 75px 35px;
+}
+
+.image{
+    padding: 15%;
+}
+
+img{
+    width: 315px;
+    opacity: 45%;
+}
+
+.name{
+    margin: 5%;
+    height: 45px;
+    width: 300px;
+    font-size: 35px;
+}
+
+.text{
+    font-size: 25px;
+    text-align: justify;
+    width: 350px;
+    min-height: 200px;
+    max-height: 400px;
+    margin-left: 2.5%;
+}
+
+.url{
+    font-size: 20px;
+    margin-top: 2.5%;
+}
+
+.pulled-apart{
+    align-items: center;
+    display: block;
+    justify-content: space-between;
+    background-color: #1E1E1E;
+    right: 25%;
+    left: 25%;
+    border-radius: 10px;
+    margin-bottom: 25%;
+}
+
+.div-1{
+    display: flex;
+}
+
+.div-2{
+    display: flex;
+    margin-top: 15px;
+}
+
+h3{
+    text-align: left;
+    margin-left: 10%;
+    padding-top: 15px;
+    font-size: 70px;
+    width: 70%;
+}

@@ -1,0 +1,41 @@
+div{
+    align-items: center;
+    display: flex;
+    justify-content: left;
+}
+
+.slot{
+    background-color: "#1F1F1F";
+    border-top: 2.5px double #7B2121;
+    border-radius: 10px;
+    padding: 5% 15% 5% 5%;
+}
+
+div div{
+    display: block;
+    font-size: 20px;
+}
+
+div div h1{
+    font-size: 45px;
+}
+
+div.mouseIn h1{
+    color: #7B2121;
+    font-style: italic;
+}
+
+img{
+    padding: 25px;
+    width: 250px;
+}
+
+img.mouseOut{
+    opacity: 60%;
+    zoom: 100%;
+}
+
+img.mouseIn{
+    opacity: 100%;
+    zoom: 125%;
+}

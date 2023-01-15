@@ -1,0 +1,20 @@
+<div>
+    <app-presentation></app-presentation>
+    <div class="pulled-aparts">
+        <app-plus-button class="icon" [color]="addPulledApart ? '#7B2121' : '#ECECEC'" (btnClick)="toggleAddPulledApart()"></app-plus-button>
+
+        <form class="add-form" *ngIf="addPulledApart" autocomplete="off">
+            <label>Pulled Apart Name: 
+                <input type="text" name="pulledApartName" id="pulledApartName" placeholder="Pulled Apart" [(ngModel)]="pulledApartName" autofocus/>
+            </label>
+        </form>
+
+        <app-pulled-apart 
+            class="pulled-apart"
+            *ngFor="let pulledApart of pulledAparts"
+            [name]="pulledApart.name"
+            [slots]="pulledApart.slots"
+            (destroy)="destroyPulledApart($event)"
+        ></app-pulled-apart>
+    </div>
+</div>

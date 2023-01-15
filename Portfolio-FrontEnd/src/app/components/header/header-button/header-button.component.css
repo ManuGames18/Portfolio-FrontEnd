@@ -1,0 +1,16 @@
+p{
+    color: #ECECEC;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: solid;
+}
+
+p:hover{
+    color: lightyellow
+}
+
+@media (max-width: 768px) {
+    p{
+        font-size: 20px;
+    }
+}
