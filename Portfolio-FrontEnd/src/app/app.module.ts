@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -13,9 +14,14 @@ import { PulledApartComponent } from './components/home/pulled-apart/pulled-apar
 import { SlotComponent } from './components/home/pulled-apart/slot/slot.component';
 import { PlusButtonComponent } from './components/plus-button/plus-button.component';
 import { XButtonComponent } from './components/x-button/x-button.component';
+import { LoginComponent } from './components/login/login.component';
+import { HomeService } from './serivices/home.service';
+import { InterceptorService } from './serivices/interceptor.service';
 
 const appRoutes:Routes = [
-  {path:'', component:HomeComponent}
+  {path:'', redirectTo:'home', pathMatch:'full'},
+  {path:'home', component:HomeComponent},
+  {path:'login', component:LoginComponent}
 ]
 
 @NgModule({
@@ -28,15 +34,18 @@ const appRoutes:Routes = [
     PulledApartComponent,
     SlotComponent,
     PlusButtonComponent,
-    XButtonComponent
+    XButtonComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes, {enableTracing:  true}),
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HomeService, {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
