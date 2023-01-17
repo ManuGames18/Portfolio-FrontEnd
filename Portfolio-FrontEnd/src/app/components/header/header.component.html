@@ -5,4 +5,8 @@
         <app-header-button class="headerBtn" text="Proyects" (btnClick)="proyects();"></app-header-button>
         <app-header-button class="headerBtn" text="Studies" (btnClick)="studies();"></app-header-button>
     </nav>
+    <div>
+        <fa-icon class="icon" [icon]="faUniversalAccess" (click)="login()" [hidden]="user"></fa-icon>
+        <fa-icon class="userIcon" [icon]="faUserBtn" (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()" [hidden]="!user"></fa-icon>
+    </div>
 </header>

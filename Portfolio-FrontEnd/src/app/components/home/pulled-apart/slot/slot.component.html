@@ -1,12 +1,30 @@
 <div class="slot" (click)="slotClick()" (mouseenter)="setMouse(true)" (mouseleave)="setMouse(false)">
-    <app-x-button class="icon" color="#7A1414" (btnClick)="destroySlot()" ></app-x-button>
-    <img 
-        [class]="mouse ? 'mouseIn' : 'mouseOut'"
-        [src]="imageUrl" 
-        [alt]="name + ' image'"
-    >
-    <div [class]="mouse ? 'mouseIn' : 'mouseOut'">
-        <h1>{{name}}</h1>
-        <p>{{text}}</p>
+    <div class="icon">
+        <app-x-button class="icon" color="#7A1414" (btnClick)="destroySlot()" ></app-x-button>
+        <app-edit-button class="icon" (btnClick)="editSlot()"></app-edit-button>
+    </div>
+
+    <form *ngIf="edit" autocomplete="off">
+        <div class="form-div">
+            <img [src]="imageUrl" class="image" alt="input image">
+            <input type="file" name="image" (change)="captureImage($event)">
+        </div>
+        <div class="inputsTexts">
+            <input type="text" class="name" name="name" placeholder="Name" [(ngModel)]="name">
+            <input type="text" class="text" name="text" placeholder="Text" [(ngModel)]="text">
+            <input type="url" class="url" name="url" placeholder="https://www.example.com" [(ngModel)]="urlLink"/>
+        </div>
+    </form>
+
+    <div *ngIf="!edit" class="slot-div">
+        <img 
+            [class]="mouse ? 'mouseIn' : 'mouseOut'"
+            [src]="imageUrl" 
+            [alt]="name + ' image'"
+        >
+        <div [class]="mouse ? 'mouseIn' : 'mouseOut'">
+            <h1>{{name}}</h1>
+            <p>{{text}}</p>
+        </div>
     </div>
 </div>

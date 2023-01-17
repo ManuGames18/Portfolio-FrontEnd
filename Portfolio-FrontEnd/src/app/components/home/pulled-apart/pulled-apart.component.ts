@@ -7,6 +7,7 @@ import { Slot } from './slot/slot';
   styleUrls: ['./pulled-apart.component.css']
 })
 export class PulledApartComponent {
+  @Input() id: number = 0;
   @Input() name: string = "";
   @Input() slots: Slot[] = [];
   @Output() destroy = new EventEmitter();
@@ -19,7 +20,7 @@ export class PulledApartComponent {
 
   toggleAddSlot(){
     if(this.addSlot && this.imageUrl.length > 0 && this.slotName.length > 0 && this.slotText.length > 0){
-      const slot: Slot = {name: this.slotName, imageUrl: this.imageUrl, text: this.slotText, urlLink: this.slotLink}
+      const slot: Slot = {id: 0, pulledApartId: this.id, name: this.slotName, imageUrl: this.imageUrl, text: this.slotText, urlLink: this.slotLink}
       this.AddSlot(slot);
       this.imageUrl = this.slotName = this.slotText = "";
     }

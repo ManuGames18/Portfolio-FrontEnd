@@ -1,6 +1,7 @@
 import { Slot } from "./slot/slot";
 
 export class PulledApart{
-    name: string = ""
+    id: number = 0;
+    name: string = "";
     slots: Slot[] = [];
 }

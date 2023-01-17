@@ -1,4 +1,9 @@
 .icon{
-    padding: 10px;
+    padding: 1%;
     zoom: 200%
+}
+
+.icon:hover{
+    background-color: #333333;
+    border-radius: 100%;
 }

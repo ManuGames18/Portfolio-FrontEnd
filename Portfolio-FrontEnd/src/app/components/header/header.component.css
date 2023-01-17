@@ -5,20 +5,45 @@ header{
     height: 25%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 nav{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     padding: 10px;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 30%;
 }
 
 .headerBtn{
     padding: 10px 20px;
     vertical-align: middle;
+}
+
+div{
+    justify-content: right;
+    margin-right: 2.5%;
+}
+
+.icon{
+    padding: 1%;
+    zoom: 200%
+}
+
+.icon:hover{
+    color: #f3f3f3;
+}
+
+.userIcon{
+    padding: 7.5%;
+    zoom: 200%;
+    color: #147A14;
+}
+
+.userIcon:hover{
+    border-radius: 100%;
+    background-color: #5C0F0F;
+    color: #8B3131;
 }
 
 @media (max-width: 768px) {

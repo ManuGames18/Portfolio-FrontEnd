@@ -12,6 +12,7 @@
 body{
     font-family: sans-serif;    
     color: #ECECEC;
+    background-color: #282828;
 }
 
 .container{
@@ -77,4 +78,12 @@ body{
 .form-control-check input {
     flex: 2;
     height: 20px;
+}
+
+input{
+    background-color: #1E1E1E;
+    padding-left: 1.5%;
+    color: #ECECEC;
+    border-left: 2.5px solid #141414;
+    border-top: 2.5px solid #141414
 }

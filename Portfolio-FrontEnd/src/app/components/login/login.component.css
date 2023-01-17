@@ -1,7 +1,59 @@
-div{
-    background-color: #282828;
-}
 
 .login{
-    padding: 15%
+    padding: 7.5% 27% 0% 27%;
+}
+
+form{
+    background-color: #232323;
+    padding: 5% 10% 10% 10%;
+}
+
+
+h1{
+    font-size: 75px;
+    margin-bottom: 5%;
+}
+
+.mb-3{
+    margin-bottom: 7.5%;
+}
+
+label{
+    font-size: 40px;
+}
+
+input{
+    height: 50px;
+    font-size: 40px;
+    width: 55%;
+    margin-left: 15%;
+}
+
+.text-danger{
+    color: #7A1414;
+    font-size: 30px;
+    text-shadow: 3px 3px 3px #191919;
+}
+
+.is-invalid{
+    border: 5px solid #7A1414;
+    border-style: ridge;
+}
+
+.is-valid{
+    border: 5px solid #147A14;
+    border-style: ridge;
+}
+
+button{
+    background-color: #191919;
+    color: #DEDEDE;
+    padding: 2.5% 5%;
+    font-size: 30px;
+    margin-left: 70%;
+}
+
+button:hover{
+    background-color: #1E1E1E;
+    color: #ECECEC;
 }

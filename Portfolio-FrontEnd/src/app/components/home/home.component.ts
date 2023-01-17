@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PulledApart } from './pulled-apart/pulled-apart';
 import { Slot } from './pulled-apart/slot/slot';
+import { HomeService } from 'src/app/serivices/home.service';
 
 @Component({
   selector: 'app-home',
@@ -10,18 +11,29 @@ import { Slot } from './pulled-apart/slot/slot';
 export class HomeComponent {
   pulledAparts: PulledApart[] = [
     {
-      name:"Hola", slots: [{
-        name: "Hola", imageUrl: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.shutterstock.com%2Fimage-vector%2Fhola-word-lettering-spanish-hello-260nw-2170222797.jpg&imgrefurl=https%3A%2F%2Fwww.shutterstock.com%2Fes%2Fsearch%2Fhola&tbnid=CNzPDmhNnVUzyM&vet=12ahUKEwj21dSW88f8AhV7g5UCHYEwAYcQMygCegUIARDuAQ..i&docid=czDLHibCz6tQRM&w=409&h=280&q=hola&client=opera-gx&ved=2ahUKEwj21dSW88f8AhV7g5UCHYEwAYcQMygCegUIARDuAQ",
-        text: "Hola como estas?", urlLink:""
-      }]
-    }]
+      id: 1,
+      name: "hola",
+      slots: [
+        {
+          id: 1,
+          pulledApartId: 1,
+          name: "hola",
+          text: "ola k ace",
+          imageUrl: "",
+          urlLink: ""
+        }
+      ]
+    }
+  ]
   addPulledApart: boolean = false;
   pulledApartName: string = "";
+
+  constructor(private service: HomeService){ }
 
   toggleAddPulledApart(){
     if(this.addPulledApart && this.pulledApartName.length !== 0){
       const slots: Slot[] = [];
-      const newPulledApart = {name:this.pulledApartName, slots:slots}
+      const newPulledApart = {id:this.pulledAparts.length+1 ,name:this.pulledApartName, slots:slots}
       this.AddPulledApart(<PulledApart>newPulledApart);
       this.pulledApartName = "";
     }

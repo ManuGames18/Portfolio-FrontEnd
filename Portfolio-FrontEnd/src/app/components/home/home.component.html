@@ -12,6 +12,7 @@
         <app-pulled-apart 
             class="pulled-apart"
             *ngFor="let pulledApart of pulledAparts"
+            [id]="pulledApart.id"
             [name]="pulledApart.name"
             [slots]="pulledApart.slots"
             (destroy)="destroyPulledApart($event)"

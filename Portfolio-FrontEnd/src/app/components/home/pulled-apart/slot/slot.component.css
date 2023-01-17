@@ -1,22 +1,84 @@
-div{
+
+form{
     align-items: center;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
+}
+
+.form-div{
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5%;
+}
+
+.image{
+    padding: 15%;
+}
+
+img{
+    width: 315px;
+    opacity: 45%;
+}
+
+.name{
+    margin: 5%;
+    height: 45px;
+    width: 300px;
+    font-size: 35px;
+}
+
+.text{
+    font-size: 25px;
+    text-align: justify;
+    width: 350px;
+    min-height: 200px;
+    max-height: 400px;
+    margin-left: 2.5%;
+}
+
+.url{
+    font-size: 20px;
+    margin-top: 2.5%;
+}
+
+.inputsTexts{
+    align-items: center;
+    display: block;
+    margin-left: 5%
 }
 
 .slot{
-    background-color: "#1F1F1F";
+    display: block;
+    background-color: #1F1F1F;
     border-top: 2.5px double #7B2121;
     border-radius: 10px;
     padding: 5% 15% 5% 5%;
 }
 
-div div{
+.slot:hover{
+    background-color: #333333;
+}
+
+.slot-div{
+    display: flex
+}
+
+div.icon{
+    justify-content: right;
+    display: flex;
+}
+
+div.icon .icon{
+    margin-left: 2%;
+}
+
+.slot div div{
     display: block;
     font-size: 20px;
 }
 
-div div h1{
+h1{
     font-size: 45px;
 }
 

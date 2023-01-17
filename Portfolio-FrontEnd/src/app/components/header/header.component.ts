@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { faUniversalAccess, faUserCheck, faUserSlash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -6,12 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  home(){
+  faUniversalAccess = faUniversalAccess;
+  faUserBtn = faUserCheck;
+  user: boolean = false;
 
+  constructor(private route:Router){ }
+
+  home(){
+    this.route.navigate(["/home"])
   }
 
   about(){
-    
+    this.route.navigate(["/about"])
   }
 
   proyects(){
@@ -20,5 +28,17 @@ export class HeaderComponent {
 
   studies(){
     
+  }
+
+  login(){
+    this.route.navigate(["/login"])
+  }
+
+  mouseEnter(){
+    this.faUserBtn = faUserSlash;
+  }
+
+  mouseLeave(){
+    this.faUserBtn = faUserCheck;
   }
 }

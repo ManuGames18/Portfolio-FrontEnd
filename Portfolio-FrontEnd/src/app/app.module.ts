@@ -17,6 +17,7 @@ import { XButtonComponent } from './components/x-button/x-button.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeService } from './serivices/home.service';
 import { InterceptorService } from './serivices/interceptor.service';
+import { EditButtonComponent } from './components/edit-button/edit-button.component';
 
 const appRoutes:Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
@@ -35,7 +36,8 @@ const appRoutes:Routes = [
     SlotComponent,
     PlusButtonComponent,
     XButtonComponent,
-    LoginComponent
+    LoginComponent,
+    EditButtonComponent
   ],
   imports: [
     BrowserModule,
